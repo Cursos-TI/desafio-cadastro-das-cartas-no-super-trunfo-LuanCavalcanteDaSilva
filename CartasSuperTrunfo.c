@@ -46,6 +46,9 @@ int main() {
 
     /* Solicitação de Informações irá ser efetuada, e usuário deve botar as informações conforme "o robozinho 
     fala". */
+
+    /* scans personalizados como %s para as variaveis com nomes com caracter e número, %d para ints decimais 
+    e %f para o pib e área de densidade populacional, que precisam de números mais específicos */
     
     printf("Bem vindo ao Super Trunfo - Países - Brasil! Para começar, insira duas cartas. \n");
 
@@ -83,6 +86,9 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
+    /*Aqui estou imprimindo os resultados, que usaram os mesmos scans personalizados, porem agora inclui se a carta em
+    questão e suas propriedades*/
+
     printf("CARTA 1 \nEstado: %s \nCódigo da Carta: %s \n", estado1, codigo_da_carta1);
     printf("Cidade: %s \nPopulação: %d \nPontos Turisticos: %d \n", cidade1, populacao1, numero_de_pontos_turisticos1);
     printf("PIB: %f \nDensidade Populacional por Área: %f \n", pib1, area1);
@@ -93,4 +99,8 @@ int main() {
 
 
     return 0;
+
+    /*Em tese, o código tava facil, os problemas que tive, era porque não havia compreendido certas funcionalidades e
+    para isso, revisei o meu conhecimento novamente até entender, aceitando sugestões de meus amigos programadores, 
+    incluso de meu aprendizado próprio após interações prévias com IDEs.*/
 }
