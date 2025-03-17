@@ -28,11 +28,17 @@ int main() {
     Estarei usando float em PIB e Área, para permitir que o programa exiba virgula 
     nos decimais.*/
     
-    char estado[21];
-    char codigo_da_carta[4];
-    char cidade[24];
-    int populacao, numero_de_pontos_turisticos;
-    float pib, area;
+    char estado1[21];
+    char codigo_da_carta1[4];
+    char cidade1[24];
+    int populacao1, numero_de_pontos_turisticos1;
+    float pib1, area1;
+
+    char estado2[21];
+    char codigo_da_carta2[4];
+    char cidade2[24];
+    int populacao2, numero_de_pontos_turisticos2;
+    float pib2, area2;
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -42,12 +48,49 @@ int main() {
     fala". */
     
     printf("Bem vindo ao Super Trunfo - Países - Brasil! Para começar, insira duas cartas. \n");
+
     printf("Primeira carta, digite o nome do estado: \n");
-    scanf("%c", &estado);
+    scanf("%c", &estado1);
+    printf("Digite o Código da Carta: \n");
+    scanf(" %c", &codigo_da_carta1);
+    printf("Digite a Cidade: \n");
+    scanf(" %c", &cidade1);
+    printf("Digite a quantidade de População: \n");
+    scanf("%d", &populacao1);
+    printf("Digite a quantidade de Pontos Turisticos: \n");
+    scanf("%d", &numero_de_pontos_turisticos1);
+    printf("Digite a quantidade de PIB: \n");
+    scanf("%f", &pib1);
+    printf("Digite a quantidade de Densidade Populacional por Área: \n");
+    scanf("%f", &area1);
+
+    printf("Segunda Carta, digite o nome do estado: \n");
+    scanf("%c", &estado2);
+    printf("Digite o Código da Carta: \n");
+    scanf(" %c", &codigo_da_carta2);
+    printf("Digite a Cidade: \n");
+    scanf(" %c", &cidade2);
+    printf("Digite a quantidade de População: \n");
+    scanf("%d", &populacao2);
+    printf("Digite a quantidade de Pontos Turisticos: \n");
+    scanf("%d", &numero_de_pontos_turisticos2);
+    printf("Digite a quantidade de PIB: \n");
+    scanf("%f", &pib2);
+    printf("Digite a quantidade de Densidade Populacional por Área: \n");
+    scanf("%f", &area2);
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+
+    printf("CARTA 1 \nEstado: %c \nCódigo da Carta: %c \n", estado1, codigo_da_carta1);
+    printf("Cidade: %c \nPopulação: %d \nPontos Turisticos: %d \n", cidade1, populacao1, numero_de_pontos_turisticos1);
+    printf("PIB: %f \nDensidade Populacional por Área: \n", pib1, area1);
+
+    printf("CARTA 2 \nEstado: %c \nCódigo da Carta: %c \n", estado2, codigo_da_carta2);
+    printf("Cidade: %c \nPopulação: %d \nPontos Turisticos: %d \n", cidade2, populacao2, numero_de_pontos_turisticos2);
+    printf("PIB: %f \nDensidade Populacional por Área: \n", pib2, area2);
+
 
     return 0;
 }
