@@ -52,9 +52,9 @@ int main() {
     printf("Primeira carta, digite o nome do estado: \n");
     scanf("%s", &estado1);
     printf("Digite o Código da Carta: \n");
-    scanf("%s", &codigo_da_carta1);
+    scanf(" %s", &codigo_da_carta1);
     printf("Digite a Cidade: \n");
-    scanf("%s", &cidade1);
+    scanf(" %s", &cidade1);
     printf("Digite a quantidade de População: \n");
     scanf("%d", &populacao1);
     printf("Digite a quantidade de Pontos Turisticos: \n");
@@ -67,9 +67,9 @@ int main() {
     printf("Segunda Carta, digite o nome do estado: \n");
     scanf("%s", &estado2);
     printf("Digite o Código da Carta: \n");
-    scanf("%s", &codigo_da_carta2);
+    scanf(" %s", &codigo_da_carta2);
     printf("Digite a Cidade: \n");
-    scanf("%s", &cidade2);
+    scanf(" %s", &cidade2);
     printf("Digite a quantidade de População: \n");
     scanf("%d", &populacao2);
     printf("Digite a quantidade de Pontos Turisticos: \n");
