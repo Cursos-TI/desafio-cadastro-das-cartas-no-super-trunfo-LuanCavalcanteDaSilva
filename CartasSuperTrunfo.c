@@ -85,11 +85,11 @@ int main() {
 
     printf("CARTA 1 \nEstado: %s \nCódigo da Carta: %s \n", estado1, codigo_da_carta1);
     printf("Cidade: %s \nPopulação: %d \nPontos Turisticos: %d \n", cidade1, populacao1, numero_de_pontos_turisticos1);
-    printf("PIB: %f \nDensidade Populacional por Área: \n", pib1, area1);
+    printf("PIB: %f \nDensidade Populacional por Área: %f \n", pib1, area1);
 
     printf("CARTA 2 \nEstado: %s \nCódigo da Carta: %s \n", estado2, codigo_da_carta2);
     printf("Cidade: %s \nPopulação: %d \nPontos Turisticos: %d \n", cidade2, populacao2, numero_de_pontos_turisticos2);
-    printf("PIB: %f \nDensidade Populacional por Área: \n", pib2, area2);
+    printf("PIB: %f \nDensidade Populacional por Área: %f \n", pib2, area2);
 
 
     return 0;
