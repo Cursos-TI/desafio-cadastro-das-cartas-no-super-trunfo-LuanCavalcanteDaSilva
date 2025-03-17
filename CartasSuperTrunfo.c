@@ -71,13 +71,13 @@ int main() {
     printf("Digite a Cidade: \n");
     scanf(" %s", &cidade2);
     printf("Digite a quantidade de População: \n");
-    scanf("%d", &populacao2);
+    scanf(" %d", &populacao2);
     printf("Digite a quantidade de Pontos Turisticos: \n");
-    scanf("%d", &numero_de_pontos_turisticos2);
+    scanf(" %d", &numero_de_pontos_turisticos2);
     printf("Digite a quantidade de PIB: \n");
-    scanf("%f", &pib2);
+    scanf(" %f", &pib2);
     printf("Digite a quantidade de Densidade Populacional por Área: \n");
-    scanf("%f", &area2);
+    scanf(" %f", &area2);
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
