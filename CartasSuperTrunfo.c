@@ -28,16 +28,12 @@ int main() {
     Estarei usando float em PIB e Área, para permitir que o programa exiba virgula 
     nos decimais.*/
     
-    char estado1[21];
-    char codigo_da_carta1[4];
-    char cidade1[24];
-    int populacao1, numero_de_pontos_turisticos1;
+    char estado1[21], carta1[4], cidade1[24];
+    int populacao1, nropontosturisticos1;
     float pib1, area1;
 
-    char estado2[21];
-    char codigo_da_carta2[4];
-    char cidade2[24];
-    int populacao2, numero_de_pontos_turisticos2;
+    char estado2[21], carta2[4], cidade2[24];
+    int populacao2, nropontosturisticos2;
     float pib2, area2;
 
     // Cadastro das Cartas:
@@ -55,13 +51,13 @@ int main() {
     printf("Primeira carta, digite o nome do estado: \n");
     scanf("%s", &estado1);
     printf("Digite o Código da Carta: \n");
-    scanf(" %s", &codigo_da_carta1);
+    scanf(" %s", &carta1);
     printf("Digite a Cidade: \n");
     scanf(" %s", &cidade1);
     printf("Digite a quantidade de População: \n");
     scanf("%d", &populacao1);
     printf("Digite a quantidade de Pontos Turisticos: \n");
-    scanf("%d", &numero_de_pontos_turisticos1);
+    scanf("%d", &nropontosturisticos1);
     printf("Digite a quantidade de PIB: \n");
     scanf("%f", &pib1);
     printf("Digite a quantidade de Densidade Populacional por Área: \n");
@@ -70,13 +66,13 @@ int main() {
     printf("Segunda Carta, digite o nome do estado: \n");
     scanf("%s", &estado2);
     printf("Digite o Código da Carta: \n");
-    scanf(" %s", &codigo_da_carta2);
+    scanf(" %s", &carta2);
     printf("Digite a Cidade: \n");
     scanf(" %s", &cidade2);
     printf("Digite a quantidade de População: \n");
     scanf(" %d", &populacao2);
     printf("Digite a quantidade de Pontos Turisticos: \n");
-    scanf(" %d", &numero_de_pontos_turisticos2);
+    scanf(" %d", &nropontosturisticos2);
     printf("Digite a quantidade de PIB: \n");
     scanf(" %f", &pib2);
     printf("Digite a quantidade de Densidade Populacional por Área: \n");
@@ -89,12 +85,12 @@ int main() {
     /*Aqui estou imprimindo os resultados, que usaram os mesmos scans personalizados, porem agora inclui se a carta em
     questão e suas propriedades*/
 
-    printf("CARTA 1 \nEstado: %s \nCódigo da Carta: %s \n", estado1, codigo_da_carta1);
-    printf("Cidade: %s \nPopulação: %d \nPontos Turisticos: %d \n", cidade1, populacao1, numero_de_pontos_turisticos1);
+    printf("CARTA 1 \nEstado: %s \nCódigo da Carta: %s \n", estado1, carta1);
+    printf("Cidade: %s \nPopulação: %d \nPontos Turisticos: %d \n", cidade1, populacao1, nropontosturisticos1);
     printf("PIB: %f \nDensidade Populacional por Área: %f \n", pib1, area1);
 
-    printf("CARTA 2 \nEstado: %s \nCódigo da Carta: %s \n", estado2, codigo_da_carta2);
-    printf("Cidade: %s \nPopulação: %d \nPontos Turisticos: %d \n", cidade2, populacao2, numero_de_pontos_turisticos2);
+    printf("CARTA 2 \nEstado: %s \nCódigo da Carta: %s \n", estado2, carta2);
+    printf("Cidade: %s \nPopulação: %d \nPontos Turisticos: %d \n", cidade2, populacao2, nropontosturisticos2);
     printf("PIB: %f \nDensidade Populacional por Área: %f \n", pib2, area2);
 
 
