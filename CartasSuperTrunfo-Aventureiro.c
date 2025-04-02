@@ -55,13 +55,13 @@ int main() {
     printf("Digite a Cidade: \n");
     scanf(" %s", &cidade1);
     printf("Digite a quantidade de População: \n");
-    scanf("%d", &populacao1);
+    scanf("  %d", &populacao1);
     printf("Digite a quantidade de Pontos Turisticos: \n");
-    scanf("%d", &nropontosturisticos1);
+    scanf("   %d", &nropontosturisticos1);
     printf("Digite a quantidade de PIB: \n");
-    scanf("%f", &pib1);
+    scanf("   %f", &pib1);
     printf("Digite a Área terrestre: \n");
-    scanf("%f", &area1);
+    scanf("     %f", &area1);
 
     printf("Segunda Carta, digite o nome do estado: \n");
     scanf("%s", &estado2);
@@ -70,11 +70,11 @@ int main() {
     printf("Digite a Cidade: \n");
     scanf(" %s", &cidade2);
     printf("Digite a quantidade de População: \n");
-    scanf(" %d", &populacao2);
+    scanf("%d", &populacao2);
     printf("Digite a quantidade de Pontos Turisticos: \n");
     scanf(" %d", &nropontosturisticos2);
     printf("Digite a quantidade de PIB: \n");
-    scanf(" %f", &pib2);
+    scanf("%f", &pib2);
     printf("Digite a Área terrestre: \n");
     scanf(" %f", &area2);
 
