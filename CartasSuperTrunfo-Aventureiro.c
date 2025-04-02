@@ -49,34 +49,48 @@ int main() {
     printf("Bem vindo ao Super Trunfo - Países - Brasil! Para começar, insira duas cartas. \n");
 
     printf("Primeira carta, digite o nome do estado: \n");
-    scanf("%s", &estado1);
+    scanf(" %20s", &estado1);
+    getchar();
     printf("Digite o Código da Carta: \n");
-    scanf(" %s", &carta1);
+    scanf(" %3s", &carta1);
+    getchar();
     printf("Digite a Cidade: \n");
-    scanf(" %s", &cidade1);
+    scanf(" %23s", &cidade1);
+    getchar();
     printf("Digite a quantidade de População: \n");
     scanf("  %d", &populacao1);
+    getchar();
     printf("Digite a quantidade de Pontos Turisticos: \n");
     scanf("   %d", &nropontosturisticos1);
+    getchar();
     printf("Digite a quantidade de PIB: \n");
     scanf("   %f", &pib1);
+    getchar();
     printf("Digite a Área terrestre: \n");
     scanf("     %f", &area1);
+    getchar();
 
     printf("Segunda Carta, digite o nome do estado: \n");
-    scanf("%s", &estado2);
+    scanf(" %20s", &estado2);
+    getchar();
     printf("Digite o Código da Carta: \n");
-    scanf(" %s", &carta2);
+    scanf(" %3s", &carta2);
+    getchar();
     printf("Digite a Cidade: \n");
-    scanf(" %s", &cidade2);
+    scanf(" %23s", &cidade2);
+    getchar();
     printf("Digite a quantidade de População: \n");
     scanf("%d", &populacao2);
+    getchar();
     printf("Digite a quantidade de Pontos Turisticos: \n");
     scanf(" %d", &nropontosturisticos2);
+    getchar();
     printf("Digite a quantidade de PIB: \n");
     scanf("%f", &pib2);
+    getchar();
     printf("Digite a Área terrestre: \n");
     scanf(" %f", &area2);
+    getchar();
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
