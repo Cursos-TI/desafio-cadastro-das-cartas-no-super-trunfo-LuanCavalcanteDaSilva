@@ -44,7 +44,8 @@ int main() {
     fala". */
 
     /* scans personalizados como %s para as variaveis com nomes com caracter e número, %d para ints decimais 
-    e %f para o pib e área de densidade populacional, que precisam de números mais específicos */
+    e %f para o pib e área de densidade populacional, que precisam de números mais específicos, o get char conserta
+    o bug do enter e coloco os %xlimite de caráter para implementar o limite sem erros */
     
     printf("Bem vindo ao Super Trunfo - Países - Brasil! Para começar, insira duas cartas. \n");
 
