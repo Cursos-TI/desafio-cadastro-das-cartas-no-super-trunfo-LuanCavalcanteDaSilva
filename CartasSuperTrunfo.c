@@ -48,7 +48,6 @@ int main() {
     
     printf("Bem vindo ao Super Trunfo - Países - Brasil! Para começar, insira duas cartas. \n");
 
-
     printf("Primeira carta, digite o nome do estado: \n");
     scanf(" %20s", &estado1);
     getchar();
