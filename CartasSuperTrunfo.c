@@ -1,117 +1,130 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países (Aluno)
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
+int main(){
+    // Declarando variáveis.
 
-/* Para essa versão do Desafio, dificuldade Aluno, estarei codando um protótipo que incluirá somente 2 
-   cartas do Brasil, logo estarei me delimitando para facilitar o teste do protótipo. */
+    char estado1, estado2;
+    char codigo1[3], codigo2[3];
+    char cidade1[25], cidade2[25];
 
-int main() {
+    unsigned long int pop1, pop2;
+    float area1, area2;
+    float pib1, pib2;
+    int pontos1 , pontos2;
 
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    float densidade1, perCapita1;
+    float densidade2, perCapita2;
 
-    /* char para declarações com caracteres de letras / letras + números, int e float para números. 
-    
-    Os char's possuem limites específicos, referentes a quantidade de caracteres. 
-    Estado possui 21, pois o estado de nome mais longo tem 20 caracteres, logo adicionei 21 ao 
-    código, para evitar erros.
+    float superPoder1, superPoder2;
+    int result_pop, result_area, result_pib, result_pontos;
+    int result_dp, result_ppc, result_sp;
 
-    Codigo da Carta inclui a letra de A-H, acompanhado de 2 números, logo inseri 4 caracteres ao 
-    código com o proposito mencionado acima.
+    printf("Bem-vindo ao jogo Super Trunfo!\n");
+    printf("Por favor, insira os dados da primeira carta.\n");
 
-    Cidade possui 24, pois a cidade de nome mais longo tem 23 caracteres, logo adicionei 24 ao
-    código para evitar erros. 
-    
-    Estarei usando float em PIB e Área, para permitir que o programa exiba virgula 
-    nos decimais.*/
-    
-    char estado1[21], carta1[4], cidade1[24];
-    int populacao1, nropontosturisticos1;
-    float pib1, area1;
+    // Coletando dados da primeira carta.
 
-    char estado2[21], carta2[4], cidade2[24];
-    int populacao2, nropontosturisticos2;
-    float pib2, area2;
+    printf("\nEstado: ");
+    scanf("%c", &estado1);
 
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    printf("Código da Carta: ");
+    scanf(" %[^\n]s", codigo1);
 
-    /* Solicitação de Informações irá ser efetuada, e usuário deve botar as informações conforme "o robozinho 
-    fala". */
+    printf("Nome da Cidade: ");
+    scanf(" %[^\n]s", cidade1);
 
-    /* scans personalizados como %s para as variaveis com nomes com caracter e número, %d para ints decimais 
-    e %f para o pib e área de densidade populacional, que precisam de números mais específicos, o get char conserta
-    o bug do enter e coloco os %xlimite de caráter para implementar o limite sem erros */
-    
-    printf("Bem vindo ao Super Trunfo - Países - Brasil! Para começar, insira duas cartas. \n");
+    printf("População: ");
+    scanf("%lu", &pop1);
 
-    printf("Primeira carta, digite o nome do estado: \n");
-    scanf(" %20s", &estado1);
-    getchar();
-    printf("Digite o Código da Carta: \n");
-    scanf(" %3s", &carta1);
-    getchar();
-    printf("Digite a Cidade: \n");
-    scanf(" %23s", &cidade1);
-    getchar();
-    printf("Digite a quantidade de População: \n");
-    scanf("  %d", &populacao1);
-    getchar();
-    printf("Digite a quantidade de Pontos Turisticos: \n");
-    scanf("   %d", &nropontosturisticos1);
-    getchar();
-    printf("Digite a quantidade de PIB: \n");
-    scanf("   %f", &pib1);
-    getchar();
-    printf("Digite a Área terrestre: \n");
-    scanf("     %f", &area1);
-    getchar();
+    printf("Área (em km²): ");
+    scanf("%f", &area1);
 
-    printf("Segunda Carta, digite o nome do estado: \n");
-    scanf(" %20s", &estado2);
-    getchar();
-    printf("Digite o Código da Carta: \n");
-    scanf(" %3s", &carta2);
-    getchar();
-    printf("Digite a Cidade: \n");
-    scanf(" %23s", &cidade2);
-    getchar();
-    printf("Digite a quantidade de População: \n");
-    scanf("%d", &populacao2);
-    getchar();
-    printf("Digite a quantidade de Pontos Turisticos: \n");
-    scanf(" %d", &nropontosturisticos2);
-    getchar();
-    printf("Digite a quantidade de PIB: \n");
+    printf("PIB: ");
+    scanf("%f", &pib1);
+
+    printf("Número de Pontos Turísticos: ");
+    scanf("%d", &pontos1);
+
+    densidade1 = pop1 / area1;
+    perCapita1 = pib1 * 1000000000 / pop1;
+
+    // Imprimindo resultados da Carta 1.
+
+    printf("\nCarta 1:\n");
+    printf("Estado: %c\n", estado1);
+    printf("Código: %s\n", codigo1);
+    printf("Nome da Cidade: %s\n", cidade1);
+    printf("População: %lu\n", pop1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: %.2f bilhões de reais\n", pib1);
+    printf("Número de Pontos Turísticos: %d\n", pontos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per Capita: %.2f reais\n", perCapita1);
+
+    // Coletando dados da segunda carta.
+
+    printf("\nAgora, insira os dados da segunda carta.\n");
+
+    printf("\nEstado: ");
+    scanf(" %c", &estado2);
+
+    printf("Código da Carta: ");
+    scanf(" %[^\n]s", codigo2);
+
+    printf("Nome da Cidade: ");
+    scanf(" %[^\n]s", cidade2);
+
+    printf("População: ");
+    scanf("%lu", &pop2);
+
+    printf("Área (em km²): ");
+    scanf("%f", &area2);
+
+    printf("PIB: ");
     scanf("%f", &pib2);
-    getchar();
-    printf("Digite a Área terrestre: \n");
-    scanf(" %f", &area2);
-    getchar();
 
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    printf("Número de Pontos Turísticos: ");
+    scanf("%d", &pontos2);
 
-    /*Aqui estou imprimindo os resultados, que usaram os mesmos scans personalizados, porem agora inclui se a carta em
-    questão e suas propriedades*/
+    densidade2 = (float)pop2 / area2;
+    perCapita2 = pib2 * 1000000000 / (float)pop2;
 
-    printf("CARTA 1 \nEstado: %s \nCódigo da Carta: %s \n", estado1, carta1);
-    printf("Cidade: %s \nPopulação: %d \nPontos Turisticos: %d \n", cidade1, populacao1, nropontosturisticos1);
-    printf("PIB: %f Bilhões de Reais\nÁrea Terrestre: %f Km²\n", pib1, area1);
+    // Imprimindo resultados da carta 2.
 
-    printf("CARTA 2 \nEstado: %s \nCódigo da Carta: %s \n", estado2, carta2);
-    printf("Cidade: %s \nPopulação: %d \nPontos Turisticos: %d \n", cidade2, populacao2, nropontosturisticos2);
-    printf("PIB: %f Bilhões de Reais\nÁrea Terrestre: %f Km²\n", pib2, area2);
+    printf("\nCarta 2:\n");
+    printf("Estado: %c\n", estado2);
+    printf("Código: %s\n", codigo2);
+    printf("Nome da Cidade: %s\n", cidade2);
+    printf("População: %lu\n", pop2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões de reais\n", pib2);
+    printf("Número de Pontos Turísticos: %d\n", pontos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2f reais\n", perCapita2);
 
+    // Calculando o Super Poder e comparando atributos de cada cidade.
+
+    superPoder1 = (float)pop1 + area1 + pib1 + (float)pontos1 + (1 / densidade1) + perCapita1;
+    superPoder2 = (float)pop2 + area2 + pib2 + (float)pontos2 + (1 / densidade2) + perCapita2;
+
+    result_pop = pop1 > pop2;
+    result_area = area1 > area2;
+    result_pib = pib1 > pib2;
+    result_pontos = pontos1 > pontos2;
+    result_dp = densidade1 < densidade2;
+    result_ppc = perCapita1 > perCapita2;
+    result_sp = superPoder1 > superPoder2;
+
+    // Imprimindo resultados da disputa
+
+    printf("\nComparação de Cartas: 1 - Carta 1 Venceu, 0 -  Carta 2 Venceu.\n");
+    printf("População: %d\n",result_pop);
+    printf("Área: %d\n", result_area);
+    printf("PIB: %d\n", result_pib);
+    printf("Pontos Turísticos: %d\n", result_pontos);
+    printf("Densidade Populacional: %d\n", result_dp);
+    printf("PIB per Capita: %d\n", result_ppc);
+    printf("Super Poder: %d\n", result_sp);
 
     return 0;
-
-    /*Em tese, o código tava facil, os problemas que tive, era porque não havia compreendido certas funcionalidades e
-    para isso, revisei o meu conhecimento novamente até entender, aceitando sugestões de meus amigos programadores, 
-    incluso de meu aprendizado próprio após interações prévias com IDEs.*/
 }
